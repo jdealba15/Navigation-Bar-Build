@@ -1,0 +1,91 @@
+
+            /* Style the nav (always the same) */
+    nav {
+        background-color: #d9138a;
+    }
+    nav ul {
+        list-style-type: none;
+    }
+    nav a {
+        font-family:sans-serif;
+        text-decoration: none;
+        color: whitesmoke
+    }
+
+    /* Style navbar for small screen */
+    #small-sreen-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    }
+    #toggle-nav-button {
+    font-size: 1.5rem;
+    margin-top: 0.4rem;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    }
+    #logo {
+    font-size: 2rem;
+    color: rgb(30,30,30);
+    padding-top: 0.8rem;
+    padding-left: 1rem;
+    }
+
+
+    /* Style menu items */
+    /* Default class (no display) */
+    .menu-items {
+    height: 0; 
+    overflow: hidden;
+    background-color: #322e2f;
+    }
+    .menu-items a {
+    display: block;
+    padding-top: 2rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
+    /* No social icons */
+    .social-icons { 
+        display: none;
+    }
+    .show-menu-items {
+    height: 15rem;
+    }
+    @media screen and (min-width: 700px) {
+    /* Now apply flex to entire container */
+    #nav-container { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    /* Hide toggle button */
+    #toggle-nav-button {
+        display: none;
+    }
+    /* Flex for menu items  */
+    .menu-items {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        background-color: #d9138a;
+    }
+    /* Remove padding applied in vertical view*/
+    .menu-items li a { 
+        padding-top: 0rem;
+    }
+    /* Social icons now visible */
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+    }
+    .social-icons a {
+        margin-right: 0.8rem;
+    }
+}
